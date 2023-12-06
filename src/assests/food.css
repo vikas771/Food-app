@@ -1,0 +1,12 @@
+.foodParent{
+    max-width: 345px;
+}
+
+.FoodDropDown{
+    display: flex;
+    align-items: center;
+}
+
+.dropdownChild{
+    min-Width: 90px;
+}
