@@ -2,9 +2,7 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
 import { Tab, Tabs } from '@mui/material';
 import '../assests/header.css'
@@ -31,7 +29,7 @@ const Header = () => {
                         <Tabs textColor='inherit' indicatorColor='secondary' value={false} >
                             <Tab label="Home" onClick={() => deleteLocalData()} component={Link} to="/" />
                             <Tab label="Food" component={Link} to="/food" />
-                            <Tab label="Contact" component={Link} to="/" />
+                            <Tab label="Contact" component={Link} to="/carousel" />
                             <Tab label="About" component={Link} to="/" />
                             <Tab label="Login" component={Link} to="/login" />
 

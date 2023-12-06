@@ -1,23 +1,17 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import '../assests/food.css'
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Carousel from './Carousel';
+    
 
 export default function Food() {
     const [age, setAge] = React.useState('');
@@ -27,7 +21,14 @@ export default function Food() {
     };
 
     return (
-        <Card className='foodParent'>
+        <>
+        <div className='FoodSection'>
+            <div>
+                <Carousel />
+            </div>
+
+           <div className='foodParent'>
+        <Card className='foodChild'>
             <CardHeader
                 title="Shrimp and Chorizo Paella"
             />
@@ -88,5 +89,10 @@ export default function Food() {
       </CardActions> */}
 
         </Card>
+        </div>
+
+        <button className='btn btn-danger'>demo</button>
+        </div>
+        </>
     );
 }

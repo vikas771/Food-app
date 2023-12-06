@@ -4,7 +4,7 @@ import  Footer  from "./Component/Footer";
 import Login from "./Component/Login";
 import Food from "./Component/Food";
 import './assests/common.css';
-import Cart from "./Component/Cart";
+import Carousel from "./Component/Carousel";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       {/* <Route path="/" element={< Footer />} /> */}
       <Route path="/login" element={< Login />} />
       <Route path="/food" element={ <Food />} />
-      <Route path="/cart" element={ <Cart /> } />
+      <Route path="/carousel" element={ <Carousel /> } />
     </Routes>
     </div>
     <Footer />
