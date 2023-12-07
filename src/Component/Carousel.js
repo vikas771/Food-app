@@ -6,9 +6,9 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 const Carousel = () => {
 
-
-
   const [activeImg, setActiveImg] = useState(0)
+  // const [searchTerm, setSearchTerm] = useState('');
+
 
   const previousImg = () => {
     setActiveImg(!activeImg ? dataImg.length - 1 : activeImg - 1)
@@ -17,6 +17,10 @@ const Carousel = () => {
   const nextImg = () => {
     setActiveImg((activeImg + 1) % dataImg.length)
   }
+  // const handleSearch = () => {
+  //   // Handle search logic here based on the searchTerm
+  //   console.log('Searching for:', searchTerm);
+  // };
 
   useEffect(() => {
     let timer = setTimeout(() => {
@@ -30,13 +34,24 @@ const Carousel = () => {
   return (
     <>
       <div className='carouselParent'>
-        <button className='previousBtn' onClick={() => previousImg()} ><ArrowBackIosIcon /></button>
-        {dataImg.map((item, index) => {
-          return (
-            <img key={item} src={item} alt='img' className={(activeImg === index ? 'firstclass' : 'secondclass')} />
-          )
-        })}
-        <button className='nextBtn' onClick={() => nextImg()}><ArrowForwardIosIcon /></button>
+        <div className='carouselChildFirst'>
+          <button className='previousBtn' onClick={() => previousImg()} ><ArrowBackIosIcon /></button>
+          {dataImg.map((item, index) => {
+            return (
+              <img key={index} src={item} alt='img' className={(activeImg === index ? 'firstclass' : 'secondclass')} />
+            )
+          })}
+          <button className='nextBtn' onClick={() => nextImg()}><ArrowForwardIosIcon /></button>
+        </div>
+
+        <div className="carousel-caption d-none d-md-block searchbtn">
+          <form className="d-flex">
+            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button className="btn btn-outline-success text-white bg-success" type="submit">Search</button>
+          </form>
+        </div>
+
+
       </div>
     </>
   )

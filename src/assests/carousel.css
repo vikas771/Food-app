@@ -15,6 +15,7 @@
     left: 40px;
     top: 50%;
     border: none;
+    color: white !important;
     background-color: transparent !important;
 }
 
@@ -23,13 +24,36 @@
     right: 40px;
     top: 50%;
     border: none;
+    color: white !important;
     background-color: transparent !important;
 }
 
 .firstclass {
     display: block;
+    /* filter: brightness(30%); */
+    z-index: -0;
 }
 
 .secondclass {
     display: none;
+    z-index: -0;
+}
+
+.carouselChildFirst{
+    z-index: -0;
+    object-fit: contain;
+    opacity: 0.9;
+    
+
+}
+
+
+.searchbtn{
+    z-index: 5;
+    opacity: 1;
+}
+.searchBar{
+    position: absolute;
+    top: 80%;
+    left: 40%;
 }
